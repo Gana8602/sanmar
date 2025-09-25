@@ -11,6 +11,8 @@ const {
   fetchWindData,
   fetchCurrentData,
   insertLogs,
+  fetchReportData,
+  fetchLive2,
 } = require("../controller/controller");
 const router = express.Router();
 const userController = require("../controller/user");
@@ -47,6 +49,7 @@ router.post("/forgotrequest", userController.forget_password_request);
 // Notification Routes
 router.post("/sendmail", sendMail);
 router.get("/get_dash_data", fetchLive);
+router.get("/get_dash_data2", fetchLive2);
 router.get("/averages", fetchAverages);
 
 router.get("/fetchTideObs", fetchTideObs);
@@ -57,5 +60,6 @@ router.get("/fetchDataHealthChart", fetchDataHealthChart);
 router.get("/fetchWindData", fetchWindData);
 router.get("/fetchCurrentData", fetchCurrentData);
 router.post("/insertLogs", insertLogs);
+router.get("/fetchReportData", fetchReportData);
 
 module.exports = router;

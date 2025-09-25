@@ -27,5 +27,5 @@ connectDB();
 app.use("/api", userRouter);
 
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on http://192.168.0.7:${PORT}`);
 });
